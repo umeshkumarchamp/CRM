@@ -1,6 +1,5 @@
 package com.hibernate;
 
-import java.lang.reflect.Array;
 import java.sql.Date;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -128,7 +127,7 @@ public class MainApp {
                     customerId = sc.nextInt();
                     Customer fetchCustomer = CustomerDao.getCustomerById(customerId);
                     if (fetchCustomer == null) {
-                        System.out.println("Order not found !");
+                        System.out.println("Customer not found !");
                     } else {
                         System.out.print("\n<------------------- Customer Details ------------------->\n");
                         System.out.print("\nCustomer Id : " + fetchCustomer.getId());
