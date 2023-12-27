@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 
 import com.hibernate.config.HibernateUtil;
 import com.hibernate.models.Customer;
+import com.hibernate.models.Order;
 
 public class CustomerDao {
     
@@ -24,5 +25,22 @@ public class CustomerDao {
             tran.commit();
         }
 
+    }
+
+    /**
+     * Get Customer List
+     */
+    public static void getCustomerList(){
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        try(Session session = sessionFactory.openSession()){
+
+        }
+    }
+
+    public static Customer getCustomerById(int customerId) {
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory(); 
+        try(Session session = sessionFactory.openSession()){
+            return session.get(Customer.class, customerId);
+        }
     }
 }

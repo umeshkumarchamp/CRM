@@ -29,4 +29,16 @@ public class ProductDao {
             tran.commit();
         }
     }
+
+    /**
+     * Get Product By Id
+     * @param productId
+     * @return
+     */
+    public static Product getProductById(int productId) {
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory(); 
+        try(Session session = sessionFactory.openSession()){
+            return session.get(Product.class, productId);
+        }
+    }
 }
