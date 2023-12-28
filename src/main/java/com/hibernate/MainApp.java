@@ -17,10 +17,10 @@ import com.hibernate.models.Order;
 import com.hibernate.models.Product;
 
 /**
- * Module : CRM (Customer Relationship Management)
- * Created By : Umesh Kumar
- * Date : 23-12-2023
- * Phone : 6201033951
+ * Module       : CRM (Customer Relationship Management)
+ * Created By   : Umesh Kumar
+ * Date         : 23-12-2023
+ * Phone        : 6201033951
  *
  */
 public class MainApp {
